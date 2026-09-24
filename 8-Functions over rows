@@ -10,3 +10,23 @@ where:
   is-high-value(get-row(orders, 2)) is true
   is-high-value(get-row(orders, 3)) is false
 end
+
+
+
+fun is-preptime(a-recipe :: Row) -> Boolean:
+  doc: "sdfsd"
+
+  # takes column named prep-time and goes through all vals
+  if get-column(a-recipe, "prep-time") < 20:
+    true
+  else:
+     false
+  end
+where:
+   is-preptime(get-row(recopes, 0)) is true
+   is-preptime(get-row(recopes, 1)) is false
+   is-preptime(get-row(recopes, 5)) is false
+
+end
+
+

@@ -26,3 +26,8 @@ get-column(get-row(tfl, 0), "bus")
 # Error tests (run these in the interactions window instead):
 # get-row(tfl, 500)  -> error: row-n-too-large (the table only has 213 rows)
 # get-column(get-row(tfl, 0), "pizza")  -> error: no column named "pizza"
+
+
+fun is-bus-time-short(a-bus-time :: Row) -> Boolean:
+
+end
