@@ -1,0 +1,12 @@
+high-value-orders = table: time :: String, amount :: Number
+  row: "08:00", 10.50
+  row: "10:15", 8.00
+end
+
+fun is-high-value(r :: Row) -> Boolean:
+  doc: "returns whether the amount column is >= 5"
+  get-column(r, "amount") >= 5.0
+where:
+  is-high-value(get-row(orders, 2)) is true
+  is-high-value(get-row(orders, 3)) is false
+end
